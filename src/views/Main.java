@@ -73,6 +73,22 @@ public class Main {
                 421
         );
 
+        manager.addMaterial(mat1);
+        manager.addMaterial(mat2);
+
+        // Hiển thị danh sách vật liệu
+        manager.displayMaterials();
+
+        // Cập nhật vật liệu
+        manager.updateMaterial("1", "Cement (Updated)", 150.0);
+
+        // Xóa vật liệu
+        manager.removeMaterial("2");
+
+        // Hiển thị danh sách vật liệu sau khi cập nhật và xóa
+        manager.displayMaterials();
+    }
+
 
 
 
