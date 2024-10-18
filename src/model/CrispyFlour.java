@@ -1,8 +1,10 @@
 package model;
 
+import controller.Discount;
+
 import java.time.LocalDate;
 
-public class CrispyFlour extends Materia {
+public class CrispyFlour extends Materia implements Discount {
     int quantity;
 
 
@@ -11,9 +13,16 @@ public class CrispyFlour extends Materia {
         this.quantity = quantity;
     }
 
+    @Override
+    public double getRealMoney() {
+        return cost*0.94;
+    }
+
+    @Override
     public double getAmount() {
         return quantity * cost;
     }
+
     LocalDate getExpiryDate() {
         return manufacturingDate.plusYears(1);
     };

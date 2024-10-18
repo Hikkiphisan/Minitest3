@@ -70,12 +70,6 @@ public class Main {
                 212000,
                 422
         );
-        materias[10] = new Meat("545",
-                "Tôm",
-                LocalDate.of(2025, 4, 21),
-                263000,
-                421
-        );
 
         Scanner scanner = new Scanner(System.in);
 
@@ -83,18 +77,18 @@ public class Main {
 
         int choice;
         do {
-            System.out.println("\n===== MENU =====");
+            System.out.println("===== MENU =====");
             System.out.println("1. Thêm sản phẩm");
             System.out.println("2. Sửa sản phẩm");
             System.out.println("3. Xóa sản phẩm");
             System.out.println("4. Hiển thị danh sách sản phẩm");
+            System.out.println("5. Tong tien cua 10 vat lieu dau tien");
+            System.out.println("6. Sắp xếp vật liệu theo giá tăng dần.");
             System.out.println("0. Thoát");
             System.out.print("Nhập lựa chọn của bạn: ");
             choice = scanner.nextInt();
             scanner.nextLine();
             switch (choice) {
-
-
                 case 1:
                     for (int i = 0; i < materias.length; i++) {
 
@@ -150,6 +144,35 @@ public class Main {
                 case 4:
                     MateriaManage.displayMaterials(materias);
                     break;
+
+                case 5:
+                    double sum = 0;
+                    for (int i = 0; i < 10 ; i++) {
+                        sum += materias[i].getCost();
+                    }
+                    System.out.printf("Tổng tiền 10 vật liệu đầu tiên khi chưa thêm vật liệu mới vào" + sum);
+
+                case 6:
+                    System.out.println("Sắp xếp vật liệu theo giá tăng dần.");
+                    for (int i = 0; i < materias.length - 1; i++) {
+                        for (int j = materias.length - 1; j > i; j--) {
+                            if (materias[i] instanceof CrispyFlour ||
+                                    materias[j] instanceof Meat) {
+                                if (materias[j].getCost() < materias[j - 1].getCost()) {
+                                    Materia temp = materias[i];
+                                    materias[i] = materias[j];
+                                    materias[j] = temp;
+                                }
+                            }
+                        }
+                    }
+                    for (int i = 0; i < materias.length; i++) {
+                        if (materias[i] instanceof CrispyFlour ||
+                                materias[i] instanceof Meat) {
+                            System.out.println(materias[i].getName() + "với giá tiền là " + materias[i].getCost() );
+                        }
+                    }
+
                 case 0:
                     System.out.println("Thoát chương trình.");
                     break;
