@@ -1,7 +1,5 @@
 package model;
 
-import controller.Discount;
-
 import java.time.LocalDate;
 
 public class Meat extends Materia implements Discount {
