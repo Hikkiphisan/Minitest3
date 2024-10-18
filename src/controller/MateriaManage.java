@@ -10,34 +10,39 @@ import java.util.Scanner;
 
 public class MateriaManage {
     public static void addMaterials(Materia[] materias) {
+
         for (int i = 0; i < materias.length; i++) {
-            Scanner scanner = new Scanner(System.in);
-            System.out.println("Nhập thông tin cho vật liệu thứ " + (i + 1) + ":");
-            System.out.print("Nhập ID: ");
-            String id = scanner.nextLine();
+            if (i > 0 && i < materias.length) {
+                Scanner scanner = new Scanner(System.in);
+                System.out.println("Nhập thông tin cho vật liệu thứ " + (materias.length) + ":");
+                System.out.print("Nhập ID: ");
+                String id = scanner.nextLine();
 
-            System.out.print("Nhập tên sản phẩm: ");
-            String name = scanner.nextLine();
+                System.out.print("Nhập tên sản phẩm: ");
+                String name = scanner.nextLine();
 
-            System.out.print("Nhập ngày sản xuất: ");
-            LocalDate manufacturingDate = LocalDate.parse(scanner.nextLine());
+                System.out.print("Nhập ngày sản xuất: ");
+                LocalDate manufacturingDate = LocalDate.parse(scanner.nextLine());
 
-            System.out.print("Nhập giá: ");
-            int cost = scanner.nextInt();
+                System.out.print("Nhập giá: ");
+                int cost = scanner.nextInt();
 
-            System.out.print("Sản phẩm là bột hay thịt? ");
-            String meat_or_flour = scanner.nextLine();
-            if (meat_or_flour == "meat") {
-                System.out.print("Nhập cân nặng: ");
-                double weight = scanner.nextDouble();
-                materias[i] = new Meat(id, name, manufacturingDate, cost, weight);
-            } else if (meat_or_flour == "flour") {
-                System.out.print("Nhập số lượng: ");
-                int quantity = scanner.nextInt();
-                materias[i] = new CrispyFlour(id, name, manufacturingDate, cost, quantity);
+                System.out.println("Sản phẩm là bột hay thịt? Nhập số 1 nếu là bột, nhập số 2 nếu là thịt");
+                int meat_or_flour = scanner.nextInt();
+
+
+                if (meat_or_flour == 2) {
+                    System.out.print("Nhập cân nặng: ");
+                    double weight = scanner.nextDouble();
+                    materias[materias.length] = new Meat(id, name, manufacturingDate, cost, weight);
+                } else if (meat_or_flour == 1) {
+                    System.out.print("Nhập số lượng: ");
+                    int quantity = scanner.nextInt();
+                    materias[materias.length] = new CrispyFlour(id, name, manufacturingDate, cost, quantity);
+                }
+                System.out.println("Da them vat lieu " + materias[materias.length].getName() + " vao gio hang!!");
+                break;
             }
-            System.out.println("Da them vat lieu" + materias[i].getName() + "vao gio hang!!");
-            break;
         }
     }
     public static void editMaterials(Materia[] materias) {
