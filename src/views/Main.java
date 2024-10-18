@@ -10,8 +10,6 @@ import java.sql.SQLOutput;
 import java.time.LocalDate;
 import java.util.Scanner;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
         Materia[] materias = new Materia[10];
@@ -23,23 +21,24 @@ public class Main {
         materias[1] = new CrispyFlour("346",
                 "Bột chiên gà giòn Ottogi.",
                 LocalDate.of(2025, 3, 1),
-                13,
-                66000);
+                135000,
+                12);
         materias[2] = new CrispyFlour("346",
                 "Bột tẩm khô chiên giòn CJ CheilJedang Corporation..",
                 LocalDate.of(2025, 2, 11),
-                6,
-                120000);
+                134000,
+                4);
         materias[3] = new CrispyFlour("346",
                 "Bột chiên giòn CJ Foods..",
                 LocalDate.of(2025, 1, 24),
-                6,
-                25000);
+                25000,
+                6);
         materias[4] = new CrispyFlour("346",
                 "Bột chiên gà rán Hàn Quốc Beksul.",
                 LocalDate.of(2025, 1, 23),
-                12,
-                68000);
+                68000,
+                12
+                );
         materias[5] = new Meat("32",
                 "Mực",
                 LocalDate.of(2025, 6, 24),
