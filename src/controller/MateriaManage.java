@@ -89,7 +89,7 @@ public class MateriaManage {
         for (int i = 0; i < materias.length; i++) {
             if (materias[i] instanceof CrispyFlour ||
                     materias[i] instanceof Meat) {
-                System.out.println(materias[i].getName() + " với giá tiền là " + materias[i].getCost() + " dong" );
+                System.out.println(materias[i].getName() + " với giá tiền là " + materias[i].getCost() + " đồng." );
             }
         }
     }

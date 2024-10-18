@@ -19,52 +19,52 @@ public class Main {
                 50000,
                 20);
         materias[1] = new CrispyFlour("346",
-                "Bột chiên gà giòn Ottogi.",
+                "Bột chiên gà giòn Ottogi",
                 LocalDate.of(2025, 3, 1),
                 135000,
                 12);
         materias[2] = new CrispyFlour("346",
-                "Bột tẩm khô chiên giòn CJ CheilJedang Corporation..",
+                "Bột tẩm khô chiên giòn CJ CheilJedang Corporation",
                 LocalDate.of(2025, 2, 11),
                 134000,
                 4);
         materias[3] = new CrispyFlour("346",
-                "Bột chiên giòn CJ Foods..",
+                "Bột chiên giòn CJ Foods",
                 LocalDate.of(2025, 1, 24),
                 25000,
                 6);
         materias[4] = new CrispyFlour("346",
-                "Bột chiên gà rán Hàn Quốc Beksul.",
+                "Bột chiên gà rán Hàn Quốc Beksul",
                 LocalDate.of(2025, 1, 23),
                 68000,
                 12
                 );
         materias[5] = new Meat("32",
-                "Mực",
+                "Thịt Mực",
                 LocalDate.of(2025, 6, 24),
                 321000,
                 325
         );
         materias[6] = new Meat("623",
-                "Lợn",
+                "Thịt Lợn",
                 LocalDate.of(2025, 1, 13),
                 412000,
                 152
         );
         materias[7] = new Meat("22",
-                "Cừu",
+                "Thịt Cừu",
                 LocalDate.of(2025, 4, 23),
                 124000,
                 521
         );
         materias[8] = new Meat("63",
-                "Bò",
+                "Thịt Bò",
                 LocalDate.of(2025, 2, 15),
                 152000,
                 124
         );
         materias[9] = new Meat("45",
-                "Cá",
+                "Thịt Cá",
                 LocalDate.of(2025, 5, 12),
                 212000,
                 422
