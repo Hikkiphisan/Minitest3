@@ -46,6 +46,6 @@ public abstract class Materia {
         this.manufacturingDate = manufacturingDate;
         this.cost = cost;
     }
-    abstract double getAmount();
-    abstract LocalDate getExpiryDate();
+    public abstract double getAmount();
+     abstract LocalDate getExpiryDate();
 }

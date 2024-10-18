@@ -21,6 +21,7 @@ public class CrispyFlour extends Materia implements Discount {
         return quantity * cost;
     }
 
+    @Override
     LocalDate getExpiryDate() {
         return manufacturingDate.plusYears(1);
     };

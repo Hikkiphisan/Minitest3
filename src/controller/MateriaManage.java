@@ -67,9 +67,10 @@ public class MateriaManage {
     public static void sumMaterials(Materia[] materias) {
         double sum = 0;
         for (int i = 0; i < 10 ; i++) {
-            sum += materias[i].getCost();
+            sum += materias[i].getAmount();
         }
-        System.out.printf("Tổng tiền 10 vật liệu đầu tiên khi chưa thêm vật liệu mới vào" + sum);
+                System.out.printf("Tổng tiền 10 vật liệu đầu tiên khi chưa thêm vật liệu mới vào là %,.0f đồng %n", sum);
+
     }
 
     public static void sortMaterials(Materia[] materias){

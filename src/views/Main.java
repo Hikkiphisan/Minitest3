@@ -78,7 +78,7 @@ public class Main {
             System.out.println("2. Sửa sản phẩm");
             System.out.println("3. Xóa sản phẩm");
             System.out.println("4. Hiển thị danh sách sản phẩm");
-            System.out.println("5. Tong tien cua 10 vat lieu dau tien");
+            System.out.println("5. Tổng tiền của 10 vật liệu đầu tiên");
             System.out.println("6. Sắp xếp vật liệu theo giá tăng dần.");
             System.out.println("0. Thoát");
             System.out.print("Nhập lựa chọn của bạn: ");
